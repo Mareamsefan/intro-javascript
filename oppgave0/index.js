@@ -82,5 +82,41 @@ button.addEventListener("click", () => {
 
 // Oppgave 6
 
+const buttonRemove = document.getElementById("remove-li");
+const list = document.getElementById("list");
+buttonRemove.addEventListener("click", () => {
+  const firstChild = list.firstElementChild;
+  list.removeChild(firstChild);
+  console.log("listeelementene er lagt til :)");
+});
+
 // Oppgave 7
+
+const nameInput = document.getElementById("name");
+const buttonOrder = document.getElementById("order");
+
+nameInput.addEventListener("input", () => {
+  if (nameInput.value.length > 4) {
+    buttonOrder.style.border = " 5px solid red";
+    buttonOrder.disabled = true;
+  } else {
+    buttonOrder.style.border = "";
+    buttonOrder.disabled = false;
+  }
+});
+
 // Oppgave 8
+const liButton = document.getElementById("color");
+liButton.addEventListener("click", () => {
+  const ulElement = document.querySelector(".children");
+
+  const children = ulElement.children;
+
+  for (let i = 0; i < children.length; i++) {
+    if (i % 2 === 0) {
+      children[i].style.border = "5px solid green";
+    } else {
+      children[i].style.border = "5px solid pink";
+    }
+  }
+});
