@@ -51,7 +51,36 @@ oppgave4.addEventListener("click", () => {
 });
 
 // Oppgave 5
-const Input = document.getEle;
+const container = document.getElementById("placeholder");
+const button = document.getElementById("create");
+const Input = document.getElementById("text");
+const select = document.getElementById("select");
+
+button.addEventListener("click", () => {
+  if (select.value === "h2") {
+    const H2 = document.createElement("h2");
+    H2.textContent = Input.value;
+    container.appendChild(H2);
+    console.log("Nå har jeg laget en h2 :) ");
+  } else if (select.value === "h3") {
+    const H3 = document.createElement("h3");
+    H3.textContent = Input.value;
+    container.appendChild(H3);
+    console.log("Nå har jeg laget en h3 :) ");
+  } else if (select.value === "span") {
+    const Span = document.createElement("p");
+    Span.textContent = Input.value;
+    container.appendChild(Span);
+    console.log("Nå har jeg laget en span :) ");
+  } else {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = Input.value;
+    container.appendChild(paragraph);
+    console.log("Nå har jeg laget en p :) ");
+  }
+});
+
 // Oppgave 6
+
 // Oppgave 7
 // Oppgave 8
